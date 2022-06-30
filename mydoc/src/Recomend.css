@@ -1,0 +1,36 @@
+.recomend{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.recomend__info{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.recomend__infoText{
+    margin-top: 15px !important;
+}
+.recomend>h1{
+    text-align: center;
+}
+.data{
+    display: flex;
+    justify-content: space-evenly;
+}
+.data>h2{
+    flex: 1;
+}
+.data>button{
+
+    margin: 15px;
+}
+.mySelect__value-container{
+    height: 70px;
+    color: blue;
+}
+.mySelect__multi-value__label
+{
+    min-height: 30px;
+    font-size: 30px;
+    color: blue;
+}

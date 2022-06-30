@@ -1,0 +1,26 @@
+.card{
+    display: flex;
+    background-color: rgba(0,0,0,0.05);
+    height: 600px;
+    width: 600px;
+    border: 2px solid  rgba(0,0,0,0.1);
+    border-radius: 30px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card__info{
+    margin: 20px;
+    width: 200px;
+    /* flex:1; */
+    /* overflow: scroll; */
+}
+.card__img>img{
+    margin: 20px;
+   max-height: 500px;
+   max-width: 400px;
+   object-fit: contain;
+}
+.card__info>Button{
+    background-color:  rgba(0,0,0,0.3) !important;
+}

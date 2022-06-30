@@ -1,0 +1,4 @@
+.doctors{
+    display: grid;
+    grid-gap: 50px;
+}
