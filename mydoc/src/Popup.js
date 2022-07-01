@@ -3,7 +3,7 @@ import './Popup.css';
 function Popup(props) {
   return (props.trigger)? (
     <div className='report'> 
-        <div>
+        <div className='report__child'>
             { props.children }
         </div>
     </div>
