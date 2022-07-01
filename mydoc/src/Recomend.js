@@ -19,7 +19,7 @@ function Recomend() {
       }
     function handleClick(){
         var j=""
-        var d;
+        var d=0;
         function addSym(item)
         {
           j=j+"-"+item;
@@ -31,8 +31,11 @@ function Recomend() {
         fetch("/api/?query="+j).then( response => response.json()
         ).then(data => { return setReport(data)});
         else
+        {
         alert("Please Enter Symptons");
-        setShow(true);
+        d=-1
+        }
+        if(d==0)setShow(true);
         console.log(report);
     };
 

@@ -37,8 +37,9 @@ def data():
     del df_test
     print(result[0])
     # print(df[result[0]])
-    dk = df[df.Disease == result[0]].drop("Disease", axis=1).to_dict('list')
-    dk1 = df1[df.Disease == result[0]].to_dict('list')
+    dk = df[df.Disease == result[0].strip()].drop(
+        "Disease", axis=1).to_dict('list')
+    dk1 = df1[df.Disease == result[0].strip()].to_dict('list')
     dk.update(dk1)
     dk["result"] = result[0]
     return dk
