@@ -7,6 +7,7 @@ import SendIcon from '@mui/icons-material/Send';
 import Symptoms from './sym';
 import { Global } from '@emotion/react';
 import Popup from './Popup';
+import { height } from '@mui/system';
 function Recomend() {
     const [name ,setName] = useState();
     const [age ,setAge] = useState();
@@ -101,7 +102,12 @@ function Recomend() {
                   <li>{report["Precaution_4"]}</li>
                 </ul>
                 <br></br>
-                <button onClick={close}>close</button>
+                <h3>Recomended Test</h3>
+                <ul>
+                  <li>{report["Tests"]}</li>
+                </ul>
+                <br></br>
+                <button onClick={close} style={{height:"40px"}}><b>CLOSE</b></button>
         </Popup>
         
         

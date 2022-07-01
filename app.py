@@ -26,6 +26,7 @@ def data():
     print(li)
     df = pd.read_csv("symptom_Description.csv")
     df1 = pd.read_csv("symptom_precaution.csv")
+    df2 = pd.read_csv("symptom_test.csv")
     df_test = pd.DataFrame(columns=list(symptoms.keys()))
     df_test.loc[0] = np.array(list(symptoms.values()))
     # df_test['continuous sneezing'] = 1
@@ -39,8 +40,10 @@ def data():
     # print(df[result[0]])
     dk = df[df.Disease == result[0].strip()].drop(
         "Disease", axis=1).to_dict('list')
-    dk1 = df1[df.Disease == result[0].strip()].to_dict('list')
+    dk1 = df1[df1.Disease == result[0].strip()].to_dict('list')
+    dk2 = df2[df2.Disease == result[0].strip()].to_dict('list')
     dk.update(dk1)
+    dk.update(dk2)
     dk["result"] = result[0]
     return dk
 
